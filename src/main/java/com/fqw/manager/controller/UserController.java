@@ -35,11 +35,15 @@ public class UserController {
 			result.setData(user);
 			result.setCurrentAuthority("admin");
 			result.setStatus("ok");
+			result.setType("account");
 			
 		}else {
 			result.setCode(1);
 			result.setMsg("登陆失败");
 			result.setData("{}");
+			result.setCurrentAuthority("admin");
+			result.setStatus("error");
+			result.setType("account");
 		}
 		return result.toJson();
 	}
