@@ -1,6 +1,9 @@
-package com.fqw.auto;
+package com.fqw.manager.vo;
 
 import java.sql.Date;
+
+import com.fqw.manager.util.FamilySort;
+import com.fqw.manager.util.Group;
 
 public class Resident {
    
@@ -13,7 +16,7 @@ public class Resident {
    //身份证号
    private Integer id_card;
    // 户主关系
-   private Family relationship;
+   private FamilySort relationship;
    //户号
    private Integer code;  
    //地址
@@ -60,11 +63,11 @@ public void setId_card(Integer id_card) {
 	this.id_card = id_card;
 }
 
-public Family getRelationship() {
+public FamilySort getRelationship() {
 	return relationship;
 }
 
-public void setRelationship(Family relationship) {
+public void setRelationship(FamilySort relationship) {
 	this.relationship = relationship;
 }
 
