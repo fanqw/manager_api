@@ -10,26 +10,36 @@ public class Resident {
 	//姓名
    private String  name;
 	//性别
-   private Boolean sex;
+   private Integer gender;
    //出生日期
    private Date birthday;
    //身份证号
-   private Integer id_card;
+   private String user_id;
    // 户主关系
    private FamilySort relationship;
    //户号
-   private Integer code;  
-   //地址
-   private String adress;  
-   //组别
-   private Group group;  
-   
+   private String family_id;    
    //电话号码
    private String  phone_number;
+   //存或
+   private Integer alive;
    
    public Resident() {
 		super();
 	}
+
+public Resident(String name, Integer gender, Date birthday, String user_id, FamilySort relationship, String family_id,
+		String phone_number, Integer alive) {
+	super();
+	this.name = name;
+	this.gender = gender;
+	this.birthday = birthday;
+	this.user_id = user_id;
+	this.relationship = relationship;
+	this.family_id = family_id;
+	this.phone_number = phone_number;
+	this.alive = alive;
+}
 
 public String getName() {
 	return name;
@@ -39,12 +49,12 @@ public void setName(String name) {
 	this.name = name;
 }
 
-public Boolean getSex() {
-	return sex;
+public Integer getGender() {
+	return gender;
 }
 
-public void setSex(Boolean sex) {
-	this.sex = sex;
+public void setGender(Integer gender) {
+	this.gender = gender;
 }
 
 public Date getBirthday() {
@@ -55,12 +65,12 @@ public void setBirthday(Date birthday) {
 	this.birthday = birthday;
 }
 
-public Integer getId_card() {
-	return id_card;
+public String getUser_id() {
+	return user_id;
 }
 
-public void setId_card(Integer id_card) {
-	this.id_card = id_card;
+public void setUser_id(String user_id) {
+	this.user_id = user_id;
 }
 
 public FamilySort getRelationship() {
@@ -71,28 +81,12 @@ public void setRelationship(FamilySort relationship) {
 	this.relationship = relationship;
 }
 
-public Integer getCode() {
-	return code;
+public String getFamily_id() {
+	return family_id;
 }
 
-public void setCode(Integer code) {
-	this.code = code;
-}
-
-public String getAdress() {
-	return adress;
-}
-
-public void setAdress(String adress) {
-	this.adress = adress;
-}
-
-public Group getGroup() {
-	return group;
-}
-
-public void setGroup(Group group) {
-	this.group = group;
+public void setFamily_id(String family_id) {
+	this.family_id = family_id;
 }
 
 public String getPhone_number() {
@@ -102,8 +96,22 @@ public String getPhone_number() {
 public void setPhone_number(String phone_number) {
 	this.phone_number = phone_number;
 }
+
+public Integer getAlive() {
+	return alive;
+}
+
+public void setAlive(Integer alive) {
+	this.alive = alive;
+}
+
+@Override
+public String toString() {
+	return "Resident [name=" + name + ", gender=" + gender + ", birthday=" + birthday + ", user_id=" + user_id
+			+ ", relationship=" + relationship + ", family_id=" + family_id + ", phone_number=" + phone_number
+			+ ", alive=" + alive + "]";
+}
+
    
-   
-   
-   
+
 }

@@ -16,6 +16,6 @@ public interface UserMapper {
 	 * @return user
 	 * 
 	 * */
-	@Select("select username,password from admin where username=#{username} and password = #{password}")
+	@Select("select username,password,authority from user where username=#{username} and password = #{password}")
 	User selectUser(@Param("username") String username,@Param("password") String password);
 }

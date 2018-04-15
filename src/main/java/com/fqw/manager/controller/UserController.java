@@ -32,16 +32,16 @@ public class UserController {
 			
 			result.setCode(0);
 			result.setMsg("登陆成功");
-			result.setData(user);
-			result.setCurrentAuthority("admin");
+//			result.setData(user);
+			result.setCurrentAuthority(user.getAuthority());
 			result.setStatus("ok");
 			result.setType("account");
 			
 		}else {
 			result.setCode(1);
 			result.setMsg("登陆失败");
-			result.setData("{}");
-			result.setCurrentAuthority("admin");
+//			result.setData("{}");
+			result.setCurrentAuthority(user.getAuthority());
 			result.setStatus("error");
 			result.setType("account");
 		}
