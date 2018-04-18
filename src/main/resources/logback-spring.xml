@@ -42,7 +42,7 @@
     <logger name="org.springframework.boot" level="DEBUG"/>
    
     <!-- show sql  -->
-    <logger name="com.fqw.info_manager.dao" level="DEBUG" />
+    <logger name="com.fqw.manager.dao" level="DEBUG" />
 
 
     <!-- 日志输出级别 -->

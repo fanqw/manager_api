@@ -38,6 +38,4 @@ public class AgeClassify {
 		return "AgeClassify [x=" + x + ", y=" + y + "]";
 	}	
 	
-	
-	
 }

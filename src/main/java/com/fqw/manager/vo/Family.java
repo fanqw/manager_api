@@ -3,64 +3,76 @@ package com.fqw.manager.vo;
 import com.fqw.manager.util.Group;
 
 public class Family {
-   
-	//排名
-	private int index;
-	//组别
-	private Group group;
+ 
 	//户号
-	private String family_code;
-	//户主
-	private String master;
-	//家庭成员
-	private String family_group;
+	private String family_id;
+	//户主身份证号
+	private String user_id;
+	//组别
+	private Group group_type;
+	//地址
+	private String adress;
+	//贫富状态；0是普通居民，1是低保户，2是贫困户，3既是低保又是贫困户
+	private Integer income_status;
+	
 	public Family() {
 		super();
 	}
-	
-	public Family(int index, Group group, String family_code, String master, String family_group) {
+
+	public Family(String family_id, String user_id, Group group, String adress, Integer status) {
 		super();
-		this.index = index;
-		this.group = group;
-		this.family_code = family_code;
-		this.master = master;
-		this.family_group = family_group;
+		this.family_id = family_id;
+		this.user_id = user_id;
+		this.group_type = group;
+		this.adress = adress;
+		this.income_status = status;
 	}
 
-	public int getIndex() {
-		return index;
+	public String getFamily_id() {
+		return family_id;
 	}
-	public void setIndex(int index) {
-		this.index = index;
+
+	public void setFamily_id(String family_id) {
+		this.family_id = family_id;
 	}
-	public Group getGroup() {
-		return group;
+
+	public String getUser_id() {
+		return user_id;
 	}
-	public void setGroup(Group group) {
-		this.group = group;
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
-	public String getFamily_code() {
-		return family_code;
+
+	public Group getGroup_type() {
+		return group_type;
 	}
-	public void setFamily_code(String family_code) {
-		this.family_code = family_code;
+
+	public void setGroup_type(Group group_type) {
+		this.group_type = group_type;
 	}
-	public String getMaster() {
-		return master;
+
+	public String getAdress() {
+		return adress;
 	}
-	public void setMaster(String master) {
-		this.master = master;
+
+	public void setAdress(String adress) {
+		this.adress = adress;
 	}
-	public String getFamily_group() {
-		return family_group;
+
+	public Integer getIncome_status() {
+		return income_status;
 	}
-	public void setFamily_group(String family_group) {
-		this.family_group = family_group;
+
+	public void setIncome_status(Integer income_status) {
+		this.income_status = income_status;
 	}
+
 	@Override
 	public String toString() {
-		return "Family [index=" + index + ", group=" + group + ", family_code=" + family_code + ", master=" + master
-				+ ", family_group=" + family_group + "]";
+		return "Family [family_id=" + family_id + ", user_id=" + user_id + ", group=" + group_type + ", adress=" + adress
+				+ ", status=" + income_status + "]";
 	}
+	
 	
 }
