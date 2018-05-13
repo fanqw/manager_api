@@ -3,11 +3,10 @@ package com.fqw.manager.vo;
 import com.fqw.manager.util.Group;
 
 public class FamilyGroup {
-   
 	//排名
 	private Integer index;
 	//组别
-	private Group group;
+	private Group group_type;
 	//户号
 	private String family_id;
 	//户主
@@ -18,27 +17,25 @@ public class FamilyGroup {
 		super();
 	}
 	
-	public FamilyGroup(Integer index, Group group, String family_id, String master, Integer family_count) {
-		super();
-		this.index = index;
-		this.group = group;
-		this.family_id = family_id;
-		this.master = master;
-		this.family_count = family_count;
-	}
-
 	public int getIndex() {
 		return index;
 	}
 	public void setIndex(int index) {
 		this.index = index;
 	}
-	public Group getGroup() {
-		return group;
+
+	public Group getGroup_type() {
+		return group_type;
 	}
-	public void setGroup(Group group) {
-		this.group = group;
+
+	public void setGroup_type(Group group_type) {
+		this.group_type = group_type;
 	}
+
+	public void setIndex(Integer index) {
+		this.index = index;
+	}
+
 	public String getFamily_id() {
 		return family_id;
 	}
@@ -57,10 +54,12 @@ public class FamilyGroup {
 	public void setFamily_count(Integer family_count) {
 		this.family_count = family_count;
 	}
+
 	@Override
 	public String toString() {
-		return "Family [index=" + index + ", group=" + group + ", family_id=" + family_id + ", master=" + master
-				+ ", family_count=" + family_count + "]";
+		return "FamilyGroup [index=" + index + ", group_type=" + group_type + ", family_id=" + family_id + ", master="
+				+ master + ", family_count=" + family_count + "]";
 	}
+
 	
 }

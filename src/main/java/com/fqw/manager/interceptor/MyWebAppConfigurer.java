@@ -7,9 +7,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 public class MyWebAppConfigurer extends WebMvcConfigurerAdapter{
 
-	//解决跨域问题
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**");
     }
+	
 }

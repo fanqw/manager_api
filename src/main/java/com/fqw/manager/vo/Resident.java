@@ -3,7 +3,6 @@ package com.fqw.manager.vo;
 import java.sql.Date;
 
 import com.fqw.manager.util.FamilySort;
-import com.fqw.manager.util.Group;
 
 public class Resident {
    

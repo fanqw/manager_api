@@ -1,14 +1,9 @@
 package com.fqw.manager.vo;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.fqw.manager.dao.ResidentInfoMapper;
 
 public class Test {
 	

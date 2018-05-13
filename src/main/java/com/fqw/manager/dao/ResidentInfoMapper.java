@@ -23,6 +23,7 @@ public interface ResidentInfoMapper {
 	@Insert("Insert into resident_info (user_id,name,gender,birthday,family_id,phone_number,alive) values (#{user_id},#{name},#{gender},#{birthday},#{family_id},#{phone_number},#{alive})")
 	int insertResident(Resident resident);
 
+	
 	@Select("Select * from resident_info where family_id = #{family_id} order by birthday limit 1")
 	Resident selectResident(@Param("family_id")String family_id);
 	
@@ -97,4 +98,12 @@ public interface ResidentInfoMapper {
      * */
     @Select("select * from resident_info where birthday = #{date}")
     Resident select1(@Param("date")String date );
+    
+    /**
+     * 根据身份证号查询
+     * @param String
+     * @return Integer
+     * */
+    @Select("select count(user_id) from resident_info where user_id =#{user_id}")
+    Integer selectResidentByUserId(@Param("user_id")String user_id);
 }

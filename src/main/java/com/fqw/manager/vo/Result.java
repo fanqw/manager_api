@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSON;
 public class Result {
 
 	private Integer code;
-	private String msg;
+	private String message;
 	private Object data;
 	private String status;
 	private String currentAuthority;
@@ -39,11 +39,11 @@ public class Result {
 	public void setCode(Integer code) {
 		this.code = code;
 	}
-	public String getMsg() {
-		return msg;
+	public String getMessage() {
+		return message;
 	}
-	public void setMsg(String msg) {
-		this.msg = msg;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 	public Object getData() {
 		return data;
@@ -53,7 +53,7 @@ public class Result {
 	}
 	@Override
 	public String toString() {
-		return "Result [code=" + code + ", msg=" + msg + ", data=" + data + "]";
+		return "Result [code=" + code + ", message=" + message + ", data=" + data + "]";
 	}
 	
 	public String toJson() {
